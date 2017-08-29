@@ -4,7 +4,11 @@ const fs = require('fs');
 const recursive = require("recursive-readdir");
 const cwd = process.cwd();
 const path = require('path');
-
+const colors = require('colors');
+if(!fs.existsSync(path.join(`${cwd}/putter`))){
+    console.log('Please create your password unit test inside the putter directory'.red);
+    process.exit();
+}
 recursive(path.join(`${cwd}/putter`), function (error, files) {
     if(error){
         throw new Error(error);
