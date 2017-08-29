@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 // Get the all the JS file from the putter directoyr
 const fs = require('fs');
 const recursive = require("recursive-readdir");
